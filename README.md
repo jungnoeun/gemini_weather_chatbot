@@ -9,16 +9,20 @@ Python과 Gemini API를 활용해 자연어로 대화하고, 날씨 질문이 �
 - 자동 함수 호출(Automatic Function Calling): 날씨 질문이라고 판단하면 Gemini가 get_weather() 도구를 선택하고 Python SDK가 실행
 - 지역명 → 좌표 변환: Open-Meteo Geocoding API를 이용해 위도·경도 검색
 - 대화 맥락 유지: Chat.send_message()로 프로그램 실행 중 이전 대화를 참고
-기술 스택
-구분	기술	용도
-언어	Python	챗봇 및 API 연동 로직
-LLM	Gemini API (gemini-3.8-flash)	자연어 이해 및 답변 생성
-SDK	google-genai	Gemini 호출 및 Function Calling
-외부 API	Open-Meteo Geocoding API	지역명으로 위도·경도 검색
-외부 API	Open-Meteo Weather API	현재 기온·습도·강수량 등 조회
-라이브러리	requests	외부 HTTP 요청
-설정 관리	python-dotenv	.env에서 API 키 로드
-개발 환경	VS Code, Python 가상환경 (venv)	개발 및 패키지 관리
+
+  
+### 기술 스택
+| 구분 | 기술 | 용도 |
+| --- | --- | --- |
+| 언어 | Python | 챗봇 및 API 연동 로직 |
+| LLM | Gemini API (`gemini-3.8-flash`) | 자연어 이해 및 답변 생성 |
+| SDK | `google-genai` | Gemini 호출 및 Function Calling |
+| 외부 API | Open-Meteo Geocoding API | 지역명으로 위도·경도 검색 |
+| 외부 API | Open-Meteo Weather API | 현재 기온·습도·강수량 등 조회 |
+| 라이브러리 | `requests` | 외부 HTTP 요청 |
+| 설정 관리 | `python-dotenv` | `.env`에서 API 키 로드 |
+| 개발 환경 | VS Code, Python 가상환경 (`venv`) | 개발 및 패키지 관리 |
+
 
 ### 동작 구조
 ```
